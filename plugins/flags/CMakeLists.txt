@@ -9,7 +9,7 @@ QT5_WRAP_CPP(Flags_SRCS flags.h  flagslist.h)
 QT5_WRAP_UI(Flags_SRCS flagsList.ui)
 
 
-add_library(FlagsProperty SHARED ${Flags_SRCS})
+add_library(FlagsProperty ${LIB_TYPE} ${Flags_SRCS})
 add_dependencies(FlagsProperty PropertyEditor)
 link_directories( "${CMAKE_BINARY_DIR}/lib" )
 target_link_libraries(FlagsProperty PropertyEditor ${Qt5Widgets_LIBRARIES}

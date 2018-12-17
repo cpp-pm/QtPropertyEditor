@@ -8,7 +8,7 @@ set(Vector3D_SRCS vector3d.cpp)
 QT5_WRAP_CPP(Vector3D_SRCS vector3d.h)
 
 
-add_library(Vector3DProperty SHARED ${Vector3D_SRCS})
+add_library(Vector3DProperty ${LIB_TYPE} ${Vector3D_SRCS})
 add_dependencies(Vector3DProperty PropertyEditor)
 link_directories( "${CMAKE_BINARY_DIR}/lib" )
 target_link_libraries(Vector3DProperty PropertyEditor ${Qt5Widgets_LIBRARIES}

@@ -7,7 +7,7 @@ include_directories(BEFORE "${CMAKE_SOURCE_DIR}/lib" )
 set(Brush_SRCS brush.cpp)
 QT5_WRAP_CPP(Brush_SRCS brush.h)
 
-add_library(BrushProperty SHARED ${Brush_SRCS})
+add_library(BrushProperty ${LIB_TYPE} ${Brush_SRCS})
 add_dependencies(BrushProperty PropertyEditor)
 link_directories( "${CMAKE_BINARY_DIR}/lib" )
 
