@@ -7,7 +7,7 @@ include_directories(BEFORE "${CMAKE_SOURCE_DIR}/lib" )
 set(Strings_SRCS strings.cpp)
 QT5_WRAP_CPP(Strings_SRCS strings.h)
 
-add_library(StringsProperty SHARED ${Strings_SRCS})
+add_library(StringsProperty ${LIB_TYPE} ${Strings_SRCS})
 add_dependencies(StringsProperty PropertyEditor)
 link_directories( "${CMAKE_BINARY_DIR}/lib" )
 target_link_libraries(StringsProperty PropertyEditor ${Qt5Widgets_LIBRARIES}

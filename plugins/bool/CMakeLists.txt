@@ -9,7 +9,7 @@ QT5_WRAP_CPP(Bool_SRCS bool.h)
 QT5_ADD_RESOURCES(Bool_SRCS resource.qrc)
 
 
-add_library(BoolProperty SHARED ${Bool_SRCS})
+add_library(BoolProperty ${LIB_TYPE} ${Bool_SRCS})
 add_dependencies(BoolProperty PropertyEditor)
 link_directories( "${CMAKE_BINARY_DIR}/lib" )
 

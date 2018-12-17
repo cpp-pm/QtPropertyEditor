@@ -9,7 +9,7 @@ if (WIN32)
   add_definitions(-DLIB_EXPORTS)
 endif(WIN32)
 
-add_library(PropertyEditor SHARED ${PE_SRCS})
+add_library(PropertyEditor ${LIB_TYPE} ${PE_SRCS})
 set_target_properties(PropertyEditor PROPERTIES	SOVERSION "${PROPERTYEDITOR_VERSION_MAJOR}.${PROPERTYEDITOR_VERSION_MINOR}"
                                                 VERSION ${PROPERTYEDITOR_VERSION})
 target_link_libraries(PropertyEditor ${Qt5Widgets_LIBRARIES} ${Qt5Core_LIBRARIES} )
